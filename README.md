@@ -31,6 +31,6 @@ Run Only API Tests:
 **npx playwright test tests/api/**
 
 4. **Viewing the Test Report**
-To view the detailed HTML report generated after execution, run:
 
-npx playwright test 
+To view the detailed HTML report generated after execution, run:
+**npx playwright show-report**
