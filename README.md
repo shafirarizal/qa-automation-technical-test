@@ -21,16 +21,16 @@ npx playwright install
 
 3. **Test Execution**
 
-Run All Tests (UI & API) in Headless Mode: 
+- **Run All Tests (UI & API) in Headless Mode:**
 **npx playwright test**
 
-Run Only Web UI Tests: 
+- **Run Only Web UI Tests:** 
 **npx playwright test tests/ui/**
 
-Run Only API Tests:
+- **Run Only API Tests:**
 **npx playwright test tests/api/**
 
 4. **Viewing the Test Report**
 
 To view the detailed HTML report generated after execution, run:
-**npx playwright show-report**
+- S**npx playwright show-report**
