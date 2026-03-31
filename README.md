@@ -12,9 +12,10 @@ This project includes a fully configured **GitHub Actions** workflow (`.github/w
 ## Installation & Setup
 
 1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/shafirarizal/qa-automation-technical-test.git](https://github.com/shafirarizal/qa-automation-technical-test.git)
+   \`\`\`bash
+   git clone https://github.com/shafirarizal/qa-automation-technical-test.git
    cd qa-automation-technical-test
+   \`\`\`
 
 2. **Install project dependencies & Playwright browsers:**
    \`\`\`bash
