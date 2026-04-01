@@ -33,4 +33,4 @@ npx playwright install
 4. **Viewing the Test Report**
 
 To view the detailed HTML report generated after execution, run:
-- S**npx playwright show-report**
+- **npx playwright show-report**
