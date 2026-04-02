@@ -36,7 +36,7 @@ This repository contains automated tests for Web UI (Swag Labs) and API (JSONPla
 ## Test Execution Results
 Here is a snapshot of the local test execution showing all positive, negative, and edge cases passing successfully:
 
-![Playwright Test Report](test-report.jpeg)
+![test-report](https://github.com/user-attachments/assets/dbafe6b7-4b3e-42bf-95f7-b5e75a963bbe)
 
 ## CI/CD Status
 This project uses GitHub Actions to run the full suite of 6 tests in a clean Ubuntu environment. This ensures code quality and state validation before any merge.
