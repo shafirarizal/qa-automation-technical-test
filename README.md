@@ -1,36 +1,37 @@
-# QA Automation Technical Test
+# QA Technical Test
 
-This repository contains an automated testing framework built as a technical assignment. The unified project utilizes **TypeScript** and **Playwright** to execute both Web UI and API testing layers.
+## Overview
+This repository contains automated tests for Web UI (Swag Labs) and API (JSONPlaceholder) using Playwright and TypeScript.
 
-## Project Architecture
-- **Web UI Automation:** Implements the **Page Object Model (POM)** design pattern targeting Swag Labs. Includes Positive, Negative, and Edge case scenarios with comprehensive assertions.
-- **API Automation:** Automates the full CRUD lifecycle on the JSONPlaceholder `/posts` endpoint, complete with ID capture, field modification validation, and error handling verification.
+## Setup Instructions
+1. Clone the repository: `git clone https://github.com/shafirarizal/qa-automation-technical-test.git`
+2. Run `npm install` to install dependencies.
+3. Run `npx playwright install` to install browsers.
 
-## CI/CD Integration
-This project includes a fully configured **GitHub Actions** workflow (`.github/workflows/playwright.yml`). Tests trigger automatically on pushes to the main branch and upload the HTML test report as a downloadable artifact.
+## How to Run Tests
+* Run all tests: `npx playwright test`
+* View Report: `npx playwright show-report`
 
-## Installation & Setup
+## Project Structure
+* `pages/`: Page Object Models for UI tests.
+* `tests/ui/`: UI automation scripts.
+* `tests/api/`: API automation scripts.
 
-1. **Clone the repository:**
-   git clone [https://github.com/shafirarizal/qa-automation-technical-test.git](https://github.com/shafirarizal/qa-automation-technical-test.git)
-   cd qa-automation-technical-test
+## Test Scenarios Covered
 
-2. **Install project dependencies & Playwright browsers:**
-npm install
-npx playwright install
+### 1. Web UI (Swag Labs)
+| Type | Scenario | Description |
+| :--- | :--- | :--- |
+| **Positive** | **End-to-End Purchase** | Login -> Add to Cart -> Checkout -> Validate Success Message. |
+| **Negative** | **Locked Out User** | Attempt login with `locked_out_user` and verify error message. |
+| **Edge** | **Missing Postal Code** | Attempt to continue checkout with a blank postal code to verify required field validation. |
 
-3. **Test Execution**
+### 2. API (JSONPlaceholder)
+| Type | Method | Description |
+| :--- | :--- | :--- |
+| **Positive** | **CRUD Lifecycle** | Executes full flow (POST -> GET -> PATCH -> GET -> DELETE -> GET 404) ensuring data persistence and modification. |
+| **Negative** | **GET** | Attempt to fetch a non-existent ID (e.g., `999999`) and verify a `404 Not Found` status. |
+| **Edge** | **POST** | Send an empty data payload `{}` to test API robustness and edge-case handling. |
 
-- **Run All Tests (UI & API) in Headless Mode:**
-**npx playwright test**
-
-- **Run Only Web UI Tests:** 
-**npx playwright test tests/ui/**
-
-- **Run Only API Tests:**
-**npx playwright test tests/api/**
-
-4. **Viewing the Test Report**
-
-To view the detailed HTML report generated after execution, run:
-- **npx playwright show-report**
+## CI/CD Status
+This project uses GitHub Actions to run the full suite of 6 tests in a clean Ubuntu environment. This ensures code quality and state validation before any merge.
