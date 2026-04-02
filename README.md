@@ -33,5 +33,10 @@ This repository contains automated tests for Web UI (Swag Labs) and API (JSONPla
 | **Negative** | **GET** | Attempt to fetch a non-existent ID (e.g., `999999`) and verify a `404 Not Found` status. |
 | **Edge** | **POST** | Send an empty data payload `{}` to test API robustness and edge-case handling. |
 
+## Test Execution Results
+Here is a snapshot of the local test execution showing all positive, negative, and edge cases passing successfully:
+
+![Playwright Test Report](test-report.jpeg)
+
 ## CI/CD Status
 This project uses GitHub Actions to run the full suite of 6 tests in a clean Ubuntu environment. This ensures code quality and state validation before any merge.
